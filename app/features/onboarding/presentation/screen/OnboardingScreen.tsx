@@ -13,7 +13,7 @@ const OnboardingScreen: React.FC<{ children: React.ReactNode; style?: ViewStyle 
     <AppContainer>
       <SafeAreaView style={{ flex: 1 }}>
         <Slider>
-          <SliderList />
+          <SliderList currentIndex={2} />
         </Slider>
         {/*
           <Slider>

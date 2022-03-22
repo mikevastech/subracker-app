@@ -11,17 +11,12 @@ import {
 } from 'react-native';
 
 import SliderItem from './SliderItem';
+import { ISliderListProps } from '../../helpers/types';
 
 /**
  * @author Mike Vas <mikevastech@gmail.com>
  */
-interface ISliderListProps {
-  style?: ViewStyle;
-  scrollX?: Animated.Value;
-  data?: { id: string; title: string }[];
-  currentIndex?: number;
-  setCurrentIndex?: (newIndex: number) => void;
-}
+
 const SliderList: React.FC<ISliderListProps> = ({
   style,
   scrollX,

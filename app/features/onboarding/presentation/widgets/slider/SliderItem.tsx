@@ -1,21 +1,25 @@
 import { VStack, Text, Image, Center, TextArea, FlatList } from 'native-base';
 import React from 'react';
 import { View, StyleSheet, useWindowDimensions, ViewStyle } from 'react-native';
+import { ISliderDataSource } from '../../helpers/types';
 const SliderItem: React.FC<{
   style?: ViewStyle;
-  item: { id: string; title: string };
+  item: ISliderDataSource;
 }> = ({ style, item }) => {
   const { width } = useWindowDimensions();
   return (
-    // <View style={[styles.container, { width }]}>
-    //   <Text width={'100%'}> {item.title} </Text>
-    // </View>
-    <Center width={width}>
-      <Text width={'100%'} color="#FFD009">
-        {' '}
-        {item.title}{' '}
-      </Text>
-    </Center>
+    <View style={[styles.container, { width }]}>
+      <Image
+        source={item.image}
+        style={{
+          width: 200,
+          height: 200,
+          resizeMode: 'cover',
+        }}
+      />
+      <Text> {item.title} </Text>
+      <Text> {item.description} </Text>
+    </View>
   );
 };
 const styles = StyleSheet.create({

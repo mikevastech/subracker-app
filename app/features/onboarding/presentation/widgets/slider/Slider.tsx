@@ -3,9 +3,10 @@ import { Text } from 'native-base';
 import { Animated, useWindowDimensions, View, ViewStyle, StyleSheet } from 'react-native';
 import SliderList from './SliderList';
 import Pagination from './Pagination';
-import source from '../../../data/sources/local/data.json';
+import source from '../../../data/sources/local/data';
 import NextItemButton from './NextItemButtom';
-import data from '../../../data/sources/local/data.json';
+import data from '../../../data/sources/local/data';
+import { ISliderDataSource } from '../../helpers/types';
 /**
  * @author Mike Vas <mikevastech@gmail.com>
  * All attributions to DesignIntoCode <https://www.patreon.com/posts/47049894>
@@ -15,13 +16,15 @@ import data from '../../../data/sources/local/data.json';
 interface ISliderListProps {
   style?: ViewStyle;
   scrollX?: Animated.Value;
-  data?: { id: string; title: string }[];
+  data?: ISliderDataSource[];
   currentIndex?: number;
   setCurrentIndex?: (newIndex: number) => void;
 }
+type ChildT = React.ReactElement<ISliderListProps>;
+type ChildrenT = ChildT[] | ChildT;
 interface ISliderProps {
   style?: ViewStyle;
-  children: React.ReactElement<ISliderListProps>[] | React.ReactElement<ISliderListProps>;
+  children: ChildrenT;
 }
 
 const Slider: React.FC<{ style?: ViewStyle }> = ({ style, children }) => {
@@ -29,11 +32,15 @@ const Slider: React.FC<{ style?: ViewStyle }> = ({ style, children }) => {
   const { width } = useWindowDimensions();
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const childrenWithProps = React.Children.map(children, (child) => {
-    // Checking isValidElement is the safe way and avoids a typescript
-    // error too.
+  const childrenWithProps = React.Children.map(children as ChildrenT, (child: ChildT) => {
     if (React.isValidElement(child)) {
-      return React.cloneElement(child, { data, scrollX, currentIndex, setCurrentIndex });
+      return React.cloneElement(child, {
+        data,
+        scrollX,
+        currentIndex,
+        setCurrentIndex,
+        ...child.props, // override with directly passed props
+      });
     }
     return child;
   });
