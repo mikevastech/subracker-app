@@ -4,9 +4,10 @@ import React, { useEffect, useRef } from 'react';
 import { View, StyleSheet, useWindowDimensions, ViewStyle, Animated } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Svg, { G, Circle } from 'react-native-svg';
+import { ISliderDataSource } from '../../helpers/types';
 const NextItemButton: React.FC<{
   style?: ViewStyle;
-  data: { id: string; title: string }[];
+  data: ISliderDataSource[];
   percentage: number;
 }> = ({ style, data, percentage }) => {
   const size = 48;

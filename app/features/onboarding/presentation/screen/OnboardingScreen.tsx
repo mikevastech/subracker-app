@@ -14,6 +14,7 @@ const OnboardingScreen: React.FC<{ children: React.ReactNode; style?: ViewStyle 
       <SafeAreaView style={{ flex: 1 }}>
         <Slider>
           <SliderList currentIndex={2} />
+          <Pagination />
         </Slider>
         {/*
           <Slider>
