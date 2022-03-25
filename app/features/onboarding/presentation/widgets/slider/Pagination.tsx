@@ -15,7 +15,7 @@ const Pagination: React.FC<{
   return (
     <View style={[styles.container]}>
       <SkipButton />
-      <DotIndicator data={data!} scrollX={scrollX!} />
+      <DotIndicator data={data!} scrollX={scrollX!} currentIndex={currentIndex!} />
       <NextItemButton
         data={data!}
         percentage={Math.round((currentIndex! + 1) * (100 / data!.length))}

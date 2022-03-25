@@ -1,17 +1,7 @@
-import React, { useRef, useState } from 'react';
-import { Text } from 'native-base';
-import {
-  Animated,
-  FlatList,
-  useWindowDimensions,
-  View,
-  ViewStyle,
-  ViewToken,
-  StyleSheet,
-} from 'react-native';
-
-import SliderItem from './SliderItem';
+import React, { useRef } from 'react';
+import { Animated, FlatList, StyleSheet, useWindowDimensions, View, ViewToken } from 'react-native';
 import { ISliderListProps } from '../../helpers/types';
+import SliderItem from './SliderItem';
 
 /**
  * @author Mike Vas <mikevastech@gmail.com>
