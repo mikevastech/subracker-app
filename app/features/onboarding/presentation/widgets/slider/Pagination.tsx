@@ -13,9 +13,14 @@ const Pagination: React.FC<{
 }> = ({ style, data, currentIndex, scrollX }) => {
   const { width } = useWindowDimensions();
   return (
-    <View style={[styles.container]}>
+    <View style={[styles.container, { width: 0.9 * width }]}>
       <SkipButton />
-      <DotIndicator data={data!} scrollX={scrollX!} currentIndex={currentIndex!} />
+      <DotIndicator
+        data={data!}
+        scrollX={scrollX!}
+        currentIndex={currentIndex!}
+        style={styles.dotIndicator}
+      />
       <NextItemButton
         data={data!}
         percentage={Math.round((currentIndex! + 1) * (100 / data!.length))}
@@ -27,6 +32,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 0.1,
     flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  dotIndicator: {
+    marginTop: 52,
   },
 });
 export default Pagination;
