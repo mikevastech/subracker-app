@@ -1,15 +1,18 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
-import { VStack, Text, Image, Center, TextArea, FlatList, HStack } from 'native-base';
+import { Text } from 'native-base';
 import React, { useEffect, useRef } from 'react';
-import { View, StyleSheet, useWindowDimensions, ViewStyle, Animated } from 'react-native';
+import { Animated, StyleSheet, View, ViewStyle } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import Svg, { G, Circle } from 'react-native-svg';
+import Svg, { Circle, G } from 'react-native-svg';
 import { ISliderDataSource } from '../../helpers/types';
 const NextItemButton: React.FC<{
   style?: ViewStyle;
   data: ISliderDataSource[];
   percentage: number;
-}> = ({ style, data, percentage }) => {
+  currentIndex: number;
+  setCurrentIndex: (newIndex: number) => void;
+}> = ({ style, data, percentage, currentIndex, setCurrentIndex }) => {
+  // TODO: export this constants
   const size = 48;
   const strokeWidth = 2;
   const center = size / 2;
@@ -58,7 +61,15 @@ const NextItemButton: React.FC<{
             // strokeDashoffset={circumference - (circumference * 33) / 100}
           />
         </G>
-        <TouchableOpacity style={styles.button} activeOpacity={0.6}>
+        <TouchableOpacity
+          style={styles.button}
+          activeOpacity={0.6}
+          onPress={() => {
+            console.log('pressed::');
+            if (currentIndex <= data.length - 1) {
+              setCurrentIndex(currentIndex + 1);
+            }
+          }}>
           <Text style={{ color: '#FFD009' }}> {'>'}</Text>
         </TouchableOpacity>
       </Svg>

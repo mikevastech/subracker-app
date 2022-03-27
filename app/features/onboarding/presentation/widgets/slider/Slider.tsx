@@ -13,7 +13,7 @@ interface ISliderListProps {
   scrollX?: Animated.Value;
   data?: ISliderDataSource[];
   currentIndex?: number;
-  setCurrentIndex?: (newIndex: number) => void;
+  q?: (newIndex: number) => void;
 }
 type ChildT = React.ReactElement<ISliderListProps>;
 type ChildrenT = ChildT[] | ChildT;

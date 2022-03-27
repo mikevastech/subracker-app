@@ -15,7 +15,7 @@ const SliderList: React.FC<ISliderListProps> = ({
   setCurrentIndex,
 }) => {
   const { width } = useWindowDimensions();
-
+  // TODO: Fix this non-null assertions once you find more time
   const viewableItemsChanged = useRef(({ viewableItems }: { viewableItems: ViewToken[] }) => {
     setCurrentIndex!(viewableItems[0].index ?? 0);
   }).current;
@@ -46,6 +46,7 @@ const SliderList: React.FC<ISliderListProps> = ({
         scrollEventThrottle={32}
         ref={slidesRef}
         style={{ flex: 1 }}
+        showsHorizontalScrollIndicator={false}
       />
     </View>
   );

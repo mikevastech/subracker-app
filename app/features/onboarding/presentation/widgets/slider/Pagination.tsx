@@ -1,15 +1,16 @@
 import React, { useRef } from 'react';
-import { Animated, StyleSheet, useWindowDimensions, View, ViewStyle } from 'react-native';
-import { ISliderDataSource } from '../../helpers/types';
+import { Animated, StyleSheet, useWindowDimensions, View } from 'react-native';
+import { ISliderListProps } from '../../helpers/types';
 import DotIndicator from './DotIndicator';
 import NextItemButton from './NextItemButtom';
 import SkipButton from './SkipButton';
-const Pagination: React.FC<{
-  style?: ViewStyle;
-  data?: ISliderDataSource[];
-  currentIndex?: number;
-  scrollX?: Animated.Value;
-}> = ({ style, data, currentIndex, scrollX }) => {
+const Pagination: React.FC<ISliderListProps> = ({
+  style,
+  data,
+  currentIndex,
+  setCurrentIndex,
+  scrollX,
+}) => {
   const { width } = useWindowDimensions();
   const safeData = data ?? [];
   const safeScrollX = scrollX ?? useRef(new Animated.Value(0)).current;
@@ -26,6 +27,8 @@ const Pagination: React.FC<{
       <NextItemButton
         data={safeData}
         percentage={Math.round((safeCurrentIndex + 1) * (100 / safeData.length))}
+        setCurrentIndex={setCurrentIndex!}
+        currentIndex={safeCurrentIndex}
       />
     </View>
   );
