@@ -1,6 +1,5 @@
-import { VStack, Text, Image, Center, TextArea, FlatList, HStack } from 'native-base';
-import React from 'react';
-import { View, StyleSheet, useWindowDimensions, ViewStyle, Animated } from 'react-native';
+import React, { useRef } from 'react';
+import { Animated, StyleSheet, useWindowDimensions, View, ViewStyle } from 'react-native';
 import { ISliderDataSource } from '../../helpers/types';
 import DotIndicator from './DotIndicator';
 import NextItemButton from './NextItemButtom';
@@ -12,18 +11,21 @@ const Pagination: React.FC<{
   scrollX?: Animated.Value;
 }> = ({ style, data, currentIndex, scrollX }) => {
   const { width } = useWindowDimensions();
+  const safeData = data ?? [];
+  const safeScrollX = scrollX ?? useRef(new Animated.Value(0)).current;
+  const safeCurrentIndex = currentIndex ?? 0;
   return (
-    <View style={[styles.container, { width: 0.9 * width }]}>
+    <View style={[styles.container, { width: 0.9 * width }, style]}>
       <SkipButton />
       <DotIndicator
-        data={data!}
-        scrollX={scrollX!}
-        currentIndex={currentIndex!}
+        data={safeData}
+        scrollX={safeScrollX}
+        currentIndex={safeCurrentIndex}
         style={styles.dotIndicator}
       />
       <NextItemButton
-        data={data!}
-        percentage={Math.round((currentIndex! + 1) * (100 / data!.length))}
+        data={safeData}
+        percentage={Math.round((safeCurrentIndex + 1) * (100 / safeData.length))}
       />
     </View>
   );

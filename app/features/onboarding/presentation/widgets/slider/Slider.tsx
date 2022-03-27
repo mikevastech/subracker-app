@@ -1,10 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Text } from 'native-base';
-import { Animated, useWindowDimensions, View, ViewStyle, StyleSheet } from 'react-native';
-import SliderList from './SliderList';
-import Pagination from './Pagination';
-import source from '../../../data/sources/local/data';
-import NextItemButton from './NextItemButtom';
+import { Animated, StyleSheet, useWindowDimensions, View, ViewStyle } from 'react-native';
 import data from '../../../data/sources/local/data';
 import { ISliderDataSource } from '../../helpers/types';
 /**
@@ -22,10 +17,6 @@ interface ISliderListProps {
 }
 type ChildT = React.ReactElement<ISliderListProps>;
 type ChildrenT = ChildT[] | ChildT;
-interface ISliderProps {
-  style?: ViewStyle;
-  children: ChildrenT;
-}
 
 const Slider: React.FC<{ style?: ViewStyle }> = ({ style, children }) => {
   const scrollX = useRef(new Animated.Value(0)).current;
@@ -44,31 +35,7 @@ const Slider: React.FC<{ style?: ViewStyle }> = ({ style, children }) => {
     }
     return child;
   });
-  return (
-    <View style={[styles.container, { width }, style]}>
-      {childrenWithProps}
-      {/* <SliderList
-        data={source}
-        scrollX={scrollX}
-        currentIndex={currentIndex}
-        setCurrentIndex={setCurrentIndex}
-      />
-      <View
-        style={{
-          flex: 0.1,
-          flexDirection: 'row',
-          width: width,
-          justifyContent: 'space-between',
-          alignContent: 'center',
-        }}>
-        <Pagination data={source} scrollX={scrollX} />
-        <NextItemButton
-          data={source}
-          percentage={Math.round((currentIndex + 1) * (100 / source.length))}
-        />
-      </View> */}
-    </View>
-  );
+  return <View style={[styles.container, { width }, style]}>{childrenWithProps}</View>;
 };
 export default Slider;
 

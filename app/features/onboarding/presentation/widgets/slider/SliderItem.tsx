@@ -8,7 +8,7 @@ const SliderItem: React.FC<{
 }> = ({ style, item }) => {
   const { width, height } = useWindowDimensions();
   return (
-    <View style={[styles.container, { width }]}>
+    <View style={[styles.container, { width }, style]}>
       <Image
         style={[
           styles.image,

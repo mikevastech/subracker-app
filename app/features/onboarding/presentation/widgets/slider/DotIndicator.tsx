@@ -1,6 +1,5 @@
-import { VStack, Text, Image, Center, TextArea, FlatList, HStack } from 'native-base';
-import React, { useRef, useState } from 'react';
-import { View, StyleSheet, useWindowDimensions, ViewStyle, Animated } from 'react-native';
+import React from 'react';
+import { Animated, StyleSheet, useWindowDimensions, View, ViewStyle } from 'react-native';
 import { ISliderDataSource } from '../../helpers/types';
 const DotIndicator: React.FC<{
   style?: ViewStyle;
@@ -8,6 +7,7 @@ const DotIndicator: React.FC<{
   scrollX: Animated.Value;
   currentIndex: number;
 }> = ({ style, data, scrollX, currentIndex }) => {
+  // TODO: Remove this constants once proper theming is introduced
   const WHITE = '#FFFFFF';
   const YELLOW = '#FFD301';
   const { width } = useWindowDimensions();
