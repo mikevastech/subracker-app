@@ -6,6 +6,7 @@ import { ViewStyle } from 'react-native';
 import 'react-native-gesture-handler';
 import SplashScreen from 'react-native-splash-screen';
 import 'reflect-metadata';
+import AuthScreen from './app/features/auth/presentation/screens/AuthScreen';
 import OnboardingScreen from './app/features/onboarding/presentation/screen/OnboardingScreen';
 
 const Stack = createStackNavigator();
@@ -18,6 +19,7 @@ const App: React.FC<{ children: React.ReactNode; style?: ViewStyle }> = () => {
     <NavigationContainer>
       <NativeBaseProvider>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="Auth" component={AuthScreen} options={{ gestureEnabled: false }} />
           <Stack.Screen
             name="Onboarding"
             component={OnboardingScreen}
