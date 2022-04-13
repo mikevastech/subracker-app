@@ -12,13 +12,13 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		A22E501CCFF73969935A29FF /* libPods-Subracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6432916642E5A5933E337C /* libPods-Subracker.a */; };
-		CD1F7D5B3DEEDE93A2FD3463 /* libPods-Subracker-SubrackerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A26DB9B6E1DAC43EBE6126E /* libPods-Subracker-SubrackerTests.a */; };
-		8EFD6C9041254A8890C7D7DB /* HindSiliguri-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5A38A547BC34E36B979333B /* HindSiliguri-Bold.ttf */; };
-		EBA25062DE7847D4B0CF7A50 /* HindSiliguri-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4673782C24AA48568E0934B0 /* HindSiliguri-Light.ttf */; };
-		CA582E6D2D2A45DEA5065348 /* HindSiliguri-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3CC7BEDCBCB04AE3B38BC630 /* HindSiliguri-Medium.ttf */; };
 		84C3BC6F73CB4215A2966847 /* HindSiliguri-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A14EC72486BC40FDB6EC1B8B /* HindSiliguri-Regular.ttf */; };
+		8EFD6C9041254A8890C7D7DB /* HindSiliguri-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5A38A547BC34E36B979333B /* HindSiliguri-Bold.ttf */; };
+		A22E501CCFF73969935A29FF /* libPods-Subracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6432916642E5A5933E337C /* libPods-Subracker.a */; };
 		AB3D59D9948C487BA815351A /* HindSiliguri-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 424DBAF5554E42C59402155E /* HindSiliguri-SemiBold.ttf */; };
+		CA582E6D2D2A45DEA5065348 /* HindSiliguri-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3CC7BEDCBCB04AE3B38BC630 /* HindSiliguri-Medium.ttf */; };
+		CD1F7D5B3DEEDE93A2FD3463 /* libPods-Subracker-SubrackerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A26DB9B6E1DAC43EBE6126E /* libPods-Subracker-SubrackerTests.a */; };
+		EBA25062DE7847D4B0CF7A50 /* HindSiliguri-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4673782C24AA48568E0934B0 /* HindSiliguri-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,18 +42,18 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Subracker/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Subracker/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Subracker/main.m; sourceTree = "<group>"; };
+		3CC7BEDCBCB04AE3B38BC630 /* HindSiliguri-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "HindSiliguri-Medium.ttf"; path = "../assets/fonts/HindSiliguri-Medium.ttf"; sourceTree = "<group>"; };
+		424DBAF5554E42C59402155E /* HindSiliguri-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "HindSiliguri-SemiBold.ttf"; path = "../assets/fonts/HindSiliguri-SemiBold.ttf"; sourceTree = "<group>"; };
+		4673782C24AA48568E0934B0 /* HindSiliguri-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "HindSiliguri-Light.ttf"; path = "../assets/fonts/HindSiliguri-Light.ttf"; sourceTree = "<group>"; };
 		5A26DB9B6E1DAC43EBE6126E /* libPods-Subracker-SubrackerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Subracker-SubrackerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B52E4AD4D611AB3F5A3F470 /* Pods-Subracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subracker.release.xcconfig"; path = "Target Support Files/Pods-Subracker/Pods-Subracker.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Subracker/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A14EC72486BC40FDB6EC1B8B /* HindSiliguri-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "HindSiliguri-Regular.ttf"; path = "../assets/fonts/HindSiliguri-Regular.ttf"; sourceTree = "<group>"; };
 		ABC964A677B41F7FC210AEA8 /* Pods-Subracker-SubrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subracker-SubrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-Subracker-SubrackerTests/Pods-Subracker-SubrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF6432916642E5A5933E337C /* libPods-Subracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Subracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D031FA7A9DDBC9FD125B1242 /* Pods-Subracker-SubrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subracker-SubrackerTests.release.xcconfig"; path = "Target Support Files/Pods-Subracker-SubrackerTests/Pods-Subracker-SubrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F5A38A547BC34E36B979333B /* HindSiliguri-Bold.ttf */ = {isa = PBXFileReference; name = "HindSiliguri-Bold.ttf"; path = "../assets/fonts/HindSiliguri-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4673782C24AA48568E0934B0 /* HindSiliguri-Light.ttf */ = {isa = PBXFileReference; name = "HindSiliguri-Light.ttf"; path = "../assets/fonts/HindSiliguri-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		3CC7BEDCBCB04AE3B38BC630 /* HindSiliguri-Medium.ttf */ = {isa = PBXFileReference; name = "HindSiliguri-Medium.ttf"; path = "../assets/fonts/HindSiliguri-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A14EC72486BC40FDB6EC1B8B /* HindSiliguri-Regular.ttf */ = {isa = PBXFileReference; name = "HindSiliguri-Regular.ttf"; path = "../assets/fonts/HindSiliguri-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		424DBAF5554E42C59402155E /* HindSiliguri-SemiBold.ttf */ = {isa = PBXFileReference; name = "HindSiliguri-SemiBold.ttf"; path = "../assets/fonts/HindSiliguri-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F5A38A547BC34E36B979333B /* HindSiliguri-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "HindSiliguri-Bold.ttf"; path = "../assets/fonts/HindSiliguri-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +116,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2DD4B3E82C3340D8A4956DCF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F5A38A547BC34E36B979333B /* HindSiliguri-Bold.ttf */,
+				4673782C24AA48568E0934B0 /* HindSiliguri-Light.ttf */,
+				3CC7BEDCBCB04AE3B38BC630 /* HindSiliguri-Medium.ttf */,
+				A14EC72486BC40FDB6EC1B8B /* HindSiliguri-Regular.ttf */,
+				424DBAF5554E42C59402155E /* HindSiliguri-SemiBold.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,19 +170,6 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		2DD4B3E82C3340D8A4956DCF /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				F5A38A547BC34E36B979333B /* HindSiliguri-Bold.ttf */,
-				4673782C24AA48568E0934B0 /* HindSiliguri-Light.ttf */,
-				3CC7BEDCBCB04AE3B38BC630 /* HindSiliguri-Medium.ttf */,
-				A14EC72486BC40FDB6EC1B8B /* HindSiliguri-Regular.ttf */,
-				424DBAF5554E42C59402155E /* HindSiliguri-SemiBold.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -528,6 +527,7 @@
 				PRODUCT_NAME = Subracker;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -552,6 +552,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.subracker.app;
 				PRODUCT_NAME = Subracker;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
