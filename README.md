@@ -1,4 +1,7 @@
 # Subracker App
+
+## Subracker App has been rebranded as a Woluht! If you are interested in collaborating you can join discord here: https://discord.gg/ruSUgMAq36.
+
 **Subracker** - a boosted reminder for your recurrent transactions (🏋️‍♀️ 💵 📺 🎶)
 ![Subracker Onboarding Screen](/docs/assets/images/subracker_app_onboarding.png)
 # The idea of the app
@@ -15,8 +18,6 @@ This app is currently managed using github projects and you can check it [Subrac
 - Look for amazing photos on [instagram](https://instagram.com/mikevastech)
 - Check other repos on [github](https://github.com/mikevastech)
 - Follow our thoughts  on [twitter](https://twitter.com/mikevastech)
-# Donations
-Homebrew is a non-profit project run entirely by unpaid volunteers. If you are interested in supporting us you can ☕️ [buy us a coffe](https://buy.stripe.com/4gw16bgzM6Bw1I44gh), or maybe feel more generous and want to [help us with more horse power](https://buy.stripe.com/5kAcOTdnA8JEcmI7su)💻  or you would [like to completely fund the development](https://buy.stripe.com/6oEbKP2IW2lggCYcMP) 💰.
 # Licence
 License
 Copyright (c) Mike Vas Tech. All rights reserved.
