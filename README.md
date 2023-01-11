@@ -1,6 +1,6 @@
 # Subracker App
 
-## Subracker App has been rebranded as a Woluht! If you are interested in collaborating you can join discord here: https://discord.gg/ruSUgMAq36.
+## Subracker App has been rebranded as a [Woluht](https://github.com/woluht)! If you are interested in collaborating you can join discord here: https://discord.gg/ruSUgMAq36.
 
 **Subracker** - a boosted reminder for your recurrent transactions (🏋️‍♀️ 💵 📺 🎶)
 ![Subracker Onboarding Screen](/docs/assets/images/subracker_app_onboarding.png)
